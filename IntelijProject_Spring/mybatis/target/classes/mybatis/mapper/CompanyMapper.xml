@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//maybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mybatis.CompanyMapper">
+    <!--public company getComById(Integer id);-->
+    <!--public void insertCom(company com);-->
+    <select id="getComById" resultType="com.edu.mybatis.bean.Company">
+        SELECT * from mybatis WHERE id=#{id}
+    </select>
+    <insert id="insertCom">
+        INSERT INTO mybatis(id,name) VALUES (#{id},#{name})
+    </insert>
+</mapper>
